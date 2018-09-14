@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>Demo cells-companion-last-year-cashflow-dm</title>
+    <script>
+      window.Polymer = {
+        lazyRegister: true,
+        useNativeCSSProperties: true
+      };
+    </script>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="../../cells-demo-helper/cells-demo-helper.html">
+    <link rel="import" href="../../cells-demo-dm-helper/cells-demo-dm-helper.html">
+    <link rel="import" href="../cells-companion-last-year-cashflow-dm.html">
+    <link rel="import" href="css/demo-styles.html">
+  </head>
+  <body unresolved ontouchstart>
+    <cells-demo-helper
+      breakpoints='{ "desktop": { "width": 1200, "height": 800, "name": "desktop" } }'
+      resolution="desktop">
+      <cells-demo-case heading="Default">
+        <template>
+          <dom-bind>
+            <template>
+              <cells-demo-dm-helper json-data="[[data]]">
+                <!-- reference component that uses this DM -->
+              </cells-demo-dm-helper>
+              <cells-companion-last-year-cashflow-dm
+                  data="{{data}}"
+                  host="https://wh1s9vx7wg.execute-api.us-west-2.amazonaws.com"></cells-companion-last-year-cashflow-dm>
+              <script>
+                document.addEventListener('WebComponentsReady', function() {
+                  var demo = document.querySelector('dom-bind');
+                });
+              </script>
+            </template>
+          </dom-bind>
+        </template>
+      </cells-demo-case>
+    </cells-demo-helper>
+  </body>
+</html>

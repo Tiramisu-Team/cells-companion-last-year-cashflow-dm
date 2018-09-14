@@ -1,0 +1,26 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../cells-generic-dp/cells-generic-dp.html">
+<!--
+`<cells-companion-last-year-cashflow-dm>` description.
+
+Example:
+
+```html
+<cells-companion-last-year-cashflow-dm></cells-companion-last-year-cashflow-dm>
+```
+
+@demo demo/index.html
+-->
+<dom-module id="cells-companion-last-year-cashflow-dm">
+  <template>
+
+    <cells-generic-dp
+        host="[[host]]"
+        path="[[path]]"
+        method="GET"
+        auto
+        on-request-success="_parseResponse"></cells-generic-dp>
+
+  </template>
+  <script src="cells-companion-last-year-cashflow-dm.js"></script>
+</dom-module>

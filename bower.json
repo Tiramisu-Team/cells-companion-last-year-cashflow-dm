@@ -1,0 +1,27 @@
+{
+  "name": "cells-companion-last-year-cashflow-dm",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "dm"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "cells-generic-dp": "^10.0.0",
+    "polymer": "Polymer/polymer#^2.0.0"
+  },
+  "devDependencies": {
+    "cells-demo-helper": "^10.0.0",
+    "cells-demo-dm-helper": "^10.0.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^3.0.0",
+    "web-component-tester": "^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "webcomponentsjs": "^1.0.0"
+  },
+  "main": [
+    "cells-companion-last-year-cashflow-dm.html"
+  ],
+  "composer": {}
+}
