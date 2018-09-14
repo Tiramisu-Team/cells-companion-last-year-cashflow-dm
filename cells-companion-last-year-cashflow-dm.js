@@ -18,7 +18,8 @@ class CellsCompanionLastYearCashflowDm extends Polymer.Element {
         type: Object,
         value: {
 
-        }
+        },
+        notify: true
       }
     };
   }
