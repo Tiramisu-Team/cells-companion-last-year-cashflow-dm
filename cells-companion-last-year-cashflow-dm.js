@@ -15,15 +15,29 @@ class CellsCompanionLastYearCashflowDm extends Polymer.Element {
         value: 'Stage/last-year-cashflow'
       },
       data: {
-        type: Array,
-        value: []
+        type: Object,
+        value: {
+
+        }
       }
-    }
+    };
   }
 
   _parseResponse(evt) {
-    console.log(evt);
-    this.set('data', evt.detail.data);
+    let categories = [];
+    let serie = [];
+    JSON.parse(evt.detail.data).forEach(el => {
+      categories.push(
+          new Date(el.date).toLocaleDateString("es-AR", {month: 'short', year: '2-digit'}));
+          serie.push(el.amount);
+    });
+    this.set('data', {
+      categories: categories,
+      data: {
+        name: 'Cashflow',
+        data: serie
+      }
+    });
   }
 }
 
